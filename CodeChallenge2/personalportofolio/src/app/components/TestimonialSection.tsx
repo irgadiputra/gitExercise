@@ -50,12 +50,12 @@ export default function TestimonialSection() {
             <div className="w-full pl-4 pr-4 font-extrabold row-start-2 col-span-8 flex flex-col items-center justify-center text-[50px] text-[#131010] ">
               Customer Testimonial
             </div>
-            <div className="row-start-3 row-span-6 rounded-3xl col-start-2 col-span-6 gap-5 flex flex-row-2 w-full">
+            <div className="row-start-3 row-span-6 rounded-3xl col-start-1 md:col-start-2 col-span-1 md:col-span-6 gap-5 flex flex-col md:flex-row w-full">
                 <button onClick={handlePrev} className="text-3xl font-extrabold">
                     &lt;
                 </button>
-                <div className="bg-[#131010] p-6 gap-10 rounded-3xl text-center w-full mx-4 flex flex-cols-2">
-                    <div className="h-full w-2/3 relative rounded-3xl">
+                <div className="bg-[#131010] p-6 gap-10 rounded-3xl text-center w-full mx-4 flex flex-col md:flex-row">
+                    <div className="h-48 md:h-full w-full md:w-2/3 relative rounded-3xl">
                     <Image
                     src={testimonials[currentIndex].image}
                     className="p-10 ml-10 rounded-full" alt="Logo" layout="fill" objectFit="cover"

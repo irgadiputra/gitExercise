@@ -35,7 +35,7 @@ export default function HeroSection() {
           <p className="text-[#FFF0DC]">
             a junior web developer
           </p>
-          <p className="text-[14px]">
+          <p className="text-[12px] md:text-[14px]">
             Building scalable and high-performance web solutions for your business needs.
           </p>
         </div>
