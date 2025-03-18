@@ -1,11 +1,32 @@
+"use client"
+import { useEffect, useRef } from "react";
+import { useAppSelector, useAppDispatch } from "@/lib/redux/hooks";
 import Image from "next/image";
-import Codeppl from '@/app/Codeppl.png';
+import Codeppl from '@/app/image/Codeppl.png';
 
 export default function AboutMeSection() {
+  const dispatch = useAppDispatch();
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const aboutme = useAppSelector((state) => state.auth.refs.about);
+  const hasMounted = useRef(false);
+
+  const scrollToSection = () => {
+    console.log(aboutme);
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (hasMounted.current) {
+      scrollToSection();
+    } else {
+      hasMounted.current = true;
+    }
+  }, [aboutme]);
+
   return (
-    <div id="aboutme-section" className="relative bg-[#D98324] h-screen w-full grid grid-cols-8 grid-rows-9 gap-4 bg-cover bg-center bg-[url('../app/Picture4.png')] text-[#FFF0DC]">
+    <div ref={aboutRef} id="aboutme-section" className="relative bg-[#D98324] h-screen w-full grid grid-cols-8 grid-rows-9 gap-4 pt-5 bg-cover bg-center bg-[url('../app/image/Picture4.png')] text-[#FFF0DC]">
       <div className="flex flex-col items-center justify-end w-full col-span-8 text-[20px] -mb-6">
-            -About me
+        - About me
       </div>
       <div className="w-full pl-4 pr-4 font-extrabold row-start-2 col-span-8 rounded-tl-3xl rounded-br-3xl flex flex-col items-center justify-center text-[50px] text-[#131010] ">
         Introduction

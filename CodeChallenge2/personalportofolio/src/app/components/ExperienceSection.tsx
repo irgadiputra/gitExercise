@@ -1,16 +1,21 @@
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogleScholar} from '@fortawesome/free-brands-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+
 export default function ExperienceSection () {
     return (
-        <div id="experince-section" className="relative bg-[#131010] h-screen w-full grid grid-cols-8 grid-rows-9 gap-4 bg-cover bg-center bg-[url('../app/Picture4.png')]">
+        <div id="experince-section" className="relative bg-[#131010] h-screen w-full grid grid-cols-8 grid-rows-9 gap-4 bg-cover bg-center bg-[url('../app/image/picture4.png')]">
             <div className="flex flex-col items-center justify-end w-full col-span-8 text-[20px] -mb-6">
-                -Experience
+                - Experience
             </div>
             <div className="w-full pl-4 pr-4 font-extrabold row-start-2 col-span-8 flex flex-col items-center justify-center text-[50px] text-[#D98324] ">
                 My education & Work Experience
             </div>
             <div className="row-start-4 row-span-5 col-start-2 col-span-6 gap-5 flex flex-row-2 w-full">
                 <div className="bg-[#D98324] p-5 row-span-3 col-start-2 col-span-6 rounded-3xl justify-center text-[14px] h-fit w-full flex flex-col gap-5">
-                    <div className="font-extrabold text-[#FFF0DC] text-[35px]">
-                        Education
+                    <div className="flex flex-row gap-5 font-extrabold text-[#FFF0DC] text-[35px]">
+                       <FontAwesomeIcon icon={faGoogleScholar} className="w-[35px]" size="lg"/> Education
                     </div>
                     <hr className="border-t-2 border-[#131010] -mt-3"/>
                     <div className="flex flex-cols-2 w-full text-[25px] justify-between text-[#131010] font-extrabold">
@@ -50,8 +55,8 @@ export default function ExperienceSection () {
                     </div>
                 </div>
                 <div className="bg-[#D98324] p-5 row-span-3 col-start-2 col-span-6 rounded-3xl justify-center text-[14px] h-fit w-full flex flex-col gap-5">
-                    <div className="font-extrabold text-[#FFF0DC] text-[35px]">
-                        Work Experience
+                    <div className="font-extrabold flex flex-row gap-5 text-[#FFF0DC] text-[35px]">
+                    <FontAwesomeIcon icon={faBriefcase} className="w-[35px]" size="lg"/>Work Experience
                     </div>
                     <hr className="border-t-2 border-[#131010] -mt-3"/>
                     <div className="flex flex-cols-2 w-full text-[25px] justify-between text-[#131010] font-extrabold">
